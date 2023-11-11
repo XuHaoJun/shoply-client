@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const { withTamagui } = require('@tamagui/next-plugin')
 const { join } = require('path')
+const million = require('million/compiler')
 
 const boolVals = {
   true: true,
@@ -66,6 +67,9 @@ module.exports = function () {
       'expo-linking',
       'expo-constants',
       'expo-modules-core',
+      'react-native-reanimated',
+      'react-native-gesture-handler',
+      'react-native-swiper-flatlist'
     ],
     experimental: {
       scrollRestoration: true,
@@ -78,6 +82,13 @@ module.exports = function () {
       ...plugin(config),
     }
   }
+
+  const millionConfig = {
+    auto: true,
+    mute: true,
+  }
+
+  config = million.next(config, millionConfig)
 
   return config
 }
