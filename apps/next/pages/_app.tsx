@@ -8,12 +8,15 @@ import { Provider } from 'app/provider'
 import Head from 'next/head'
 import React from 'react'
 import type { SolitoAppProps } from 'solito'
+import { I18nProvider } from '@lingui/react'
+import { useLinguiInit } from 'translations/utils'
 
 if (process.env.NODE_ENV === 'production') {
   require('../public/tamagui.css')
 }
 
 function MyApp({ Component, pageProps }: SolitoAppProps) {
+  const initializedI18n = useLinguiInit((pageProps as any).i18n)
   return (
     <>
       <Head>
@@ -22,7 +25,9 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
-        <Component {...pageProps} />
+        <I18nProvider i18n={initializedI18n}>
+          <Component {...pageProps} />
+        </I18nProvider>
       </ThemeProvider>
     </>
   )

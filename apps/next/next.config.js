@@ -2,6 +2,7 @@
 const { withTamagui } = require('@tamagui/next-plugin')
 const { join } = require('path')
 const million = require('million/compiler')
+const linguiConfig = require("./lingui.config")
 
 const boolVals = {
   true: true,
@@ -69,10 +70,15 @@ module.exports = function () {
       'expo-modules-core',
       'react-native-reanimated',
       'react-native-gesture-handler',
-      'react-native-swiper-flatlist'
+      'react-native-swiper-flatlist',
     ],
     experimental: {
       scrollRestoration: true,
+      swcPlugins: [['@lingui/swc-plugin', {}]],
+    },
+    i18n: {
+      locales: linguiConfig.locales,
+      defaultLocale: linguiConfig.sourceLocale,
     },
   }
 

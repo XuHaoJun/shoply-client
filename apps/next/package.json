@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lingui/loader": "^4.5.0",
+    "@lingui/swc-plugin": "^4.0.4",
     "@tamagui/config": "^1.76.0",
     "@tamagui/next-theme": "^1.76.0",
     "app": "0.0.0",
@@ -24,6 +26,7 @@
     "vercel": "^32.5.3"
   },
   "devDependencies": {
+    "@lingui/cli": "^4.5.0",
     "@tamagui/next-plugin": "^1.76.0",
     "@types/node": "^20.9.0",
     "eslint-config-next": "^13.5.6"

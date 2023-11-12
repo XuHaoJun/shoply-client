@@ -18,7 +18,10 @@
     "build": "yarn workspaces foreach --all --exclude next-app run build",
     "upgrade:tamagui": "yarn up '*tamagui*'@latest '@tamagui/*'@latest",
     "upgrade:tamagui:canary": "yarn up '*tamagui*'@canary '@tamagui/*'@canary",
-    "check-deps": "check-dependency-version-consistency ."
+    "check-deps": "check-dependency-version-consistency .",
+    "i18n:extract:next": "cd apps/next && npx lingui extract --clean",
+    "i18n:extract:expo": "cd apps/expo && npx lingui extract --clean && npx lingui compile --typescript",
+    "i18n": "yarn i18n:extract:next && yarn i18n:extract:expo"
   },
   "resolutions": {
     "react": "^18.2.0",

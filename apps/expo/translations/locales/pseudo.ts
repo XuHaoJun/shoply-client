@@ -1,0 +1,1 @@
+/*eslint-disable*/export const messages=JSON.parse("{\"rUSdYR\":\"ĥēĺĺōà\",\"pH/6Rn\":\"中文測試\"}");

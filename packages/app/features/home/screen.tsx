@@ -12,6 +12,7 @@ import {
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import React, { useEffect, useState } from 'react'
 import { useLink } from 'solito/link'
+import { Trans } from '@lingui/macro'
 
 // import { GreeterClient } from '@my/proto'
 // import { HelloRequest, HelloReply } from '@my/proto'
@@ -19,10 +20,9 @@ import { useLink } from 'solito/link'
 export function HomeScreen() {
   const linkProps = useLink({
     href: '/user/nate',
-    replace: true,
     experimental: {
       nativeBehavior: 'stack-replace',
-      isNestedNavigator: false
+      isNestedNavigator: false,
     },
   })
 
@@ -56,7 +56,10 @@ export function HomeScreen() {
           Here's a basic starter to show navigating from one screen to another. This screen uses the
           same code on Next.js and React Native.
         </Paragraph>
-        <Paragraph ta="center">hello: {hello}</Paragraph>
+        <Paragraph ta="center">
+          <Trans>中文測試</Trans>
+        </Paragraph>
+        <Paragraph ta="center"><Trans>helloa</Trans>: {hello}</Paragraph>
         <Separator />
         <Paragraph ta="center">
           Made by{' '}
