@@ -17,6 +17,9 @@
     "watch": "tamagui-build --watch"
   },
   "dependencies": {
+    "@lingui/core": "^4.5.0",
+    "@lingui/macro": "^4.5.0",
+    "@lingui/react": "^4.5.0",
     "@my/store": "0.0.1",
     "@tamagui/animations-react-native": "^1.76.0",
     "@tamagui/font-inter": "^1.76.0",
@@ -24,6 +27,11 @@
     "@tamagui/shorthands": "^1.76.0",
     "@tamagui/themes": "^1.76.0",
     "@tamagui/toast": "^1.76.0",
+    "burnt": "^0.12.1",
+    "react-native-reanimated": "3.3.0",
+    "react-native-reanimated-carousel": "4.0.0-alpha.0",
+    "react-native-safe-area-context": "4.6.3",
+    "react-native-swiper-flatlist": "^3.2.3",
     "tamagui": "^1.76.0"
   },
   "devDependencies": {
