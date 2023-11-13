@@ -27,6 +27,8 @@
   },
   "devDependencies": {
     "@lingui/cli": "^4.5.0",
+    "@swc-jotai/debug-label": "^0.1.0",
+    "@swc-jotai/react-refresh": "^0.1.0",
     "@tamagui/next-plugin": "^1.76.0",
     "@types/node": "^20.9.0",
     "eslint-config-next": "^13.5.6"

@@ -1,0 +1,12 @@
+{
+  "name": "@my/store",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.ts",
+  "dependencies": {
+    "immer": "^10.0.3",
+    "jotai": "^2.5.1",
+    "jotai-immer": "^0.2.0",
+    "jotai-scope": "^0.4.1"
+  }
+}

@@ -5,7 +5,8 @@
     "paths": {
       "app/*": ["./packages/app/*"],
       "@my/ui/*": ["./packages/ui/*"],
-      "@my/proto/*": ["./packages/proto/*"]
+      "@my/proto/*": ["./packages/proto/*"],
+      "@my/store/*": ["./packages/store/*"]
     }
   },
   "extends": "expo/tsconfig.base",

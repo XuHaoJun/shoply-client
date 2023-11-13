@@ -3821,10 +3821,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@my/store@0.0.1, @my/store@workspace:packages/store":
+  version: 0.0.0-use.local
+  resolution: "@my/store@workspace:packages/store"
+  dependencies:
+    immer: ^10.0.3
+    jotai: ^2.5.1
+    jotai-immer: ^0.2.0
+    jotai-scope: ^0.4.1
+  languageName: unknown
+  linkType: soft
+
 "@my/ui@0.0.1, @my/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@my/ui@workspace:packages/ui"
   dependencies:
+    "@my/store": 0.0.1
     "@tamagui/animations-react-native": ^1.76.0
     "@tamagui/build": ^1.76.0
     "@tamagui/font-inter": ^1.76.0
@@ -4448,6 +4460,20 @@ __metadata:
   dependencies:
     "@sinonjs/commons": ^2.0.0
   checksum: c62aa98e7cefda8dedc101ce227abc888dc46b8ff9706c5f0a8dfd9c3ada97d0a5611384738d9ba0b26b59f99c2ba24efece8e779bb08329e9e87358fa309824
+  languageName: node
+  linkType: hard
+
+"@swc-jotai/debug-label@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@swc-jotai/debug-label@npm:0.1.0"
+  checksum: 9eb730742e07eef846b42f6dbb6bef46f18f66e0785ce15f72873271a05957fc89bb463ba7bad76078f64eeb02a9a414787576e2a11f11bcc26c579683af8033
+  languageName: node
+  linkType: hard
+
+"@swc-jotai/react-refresh@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@swc-jotai/react-refresh@npm:0.1.0"
+  checksum: 95ec33e81d74fbedc20cc5b9c56b045e0758001335ab91782f6af59869e6fa34d500b00fcad1fe51c4650025c85b0db2a6994233f4f7fc06947f0c734231a359
   languageName: node
   linkType: hard
 
@@ -11732,6 +11758,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immer@npm:^10.0.3":
+  version: 10.0.3
+  resolution: "immer@npm:10.0.3"
+  checksum: 76acabe6f40e752028313762ba477a5d901e57b669f3b8fb406b87b9bb9b14e663a6fbbf5a6d1ab323737dd38f4b2494a4e28002045b88948da8dbf482309f28
+  languageName: node
+  linkType: hard
+
 "import-fresh@npm:^2.0.0":
   version: 2.0.0
   resolution: "import-fresh@npm:2.0.0"
@@ -12494,6 +12527,42 @@ __metadata:
   version: 1.1.0
   resolution: "join-component@npm:1.1.0"
   checksum: b904c2f98549e4195022caca3a7dc837f9706c670ff333f3d617f2aed23bce2841322a999734683b6ab8e202568ad810c11ff79b58a64df66888153f04750239
+  languageName: node
+  linkType: hard
+
+"jotai-immer@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "jotai-immer@npm:0.2.0"
+  peerDependencies:
+    immer: "*"
+    jotai: ">=1.11.0"
+    react: ">=17.0.0"
+  checksum: 6860557e0e1550e5c7393b46632ecd90a803774c9b88f69a52b38bf14061ebc0a1de0c8484edd6b956d85de603dca5d06b50ed164bc12a83514c0bcf5d394a5c
+  languageName: node
+  linkType: hard
+
+"jotai-scope@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "jotai-scope@npm:0.4.1"
+  peerDependencies:
+    jotai: ">=2.5.0"
+    react: ">=17.0.0"
+  checksum: 6676b45f597b17124725a30f95af6fb82b04c6d2c5af21ce930e7e6e53d5bf7c2df3b81b43748cd089e95a4ca48fc47bdff61d4da10622ddee078f4db933e1a1
+  languageName: node
+  linkType: hard
+
+"jotai@npm:^2.5.1":
+  version: 2.5.1
+  resolution: "jotai@npm:2.5.1"
+  peerDependencies:
+    "@types/react": ">=17.0.0"
+    react: ">=17.0.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: a8168a8cf2f7a5be3870ec5ee151a2e8ac1ad635e39241c5e223cb29a678eb88cea996cfc37466a017f83b34e33c76e764a3af5aeef8ab67b5b32543d6079456
   languageName: node
   linkType: hard
 
@@ -13959,6 +14028,8 @@ __metadata:
     "@lingui/cli": ^4.5.0
     "@lingui/loader": ^4.5.0
     "@lingui/swc-plugin": ^4.0.4
+    "@swc-jotai/debug-label": ^0.1.0
+    "@swc-jotai/react-refresh": ^0.1.0
     "@tamagui/config": ^1.76.0
     "@tamagui/next-plugin": ^1.76.0
     "@tamagui/next-theme": ^1.76.0

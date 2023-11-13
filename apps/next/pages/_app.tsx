@@ -9,6 +9,8 @@ import Head from 'next/head'
 import React from 'react'
 import type { SolitoAppProps } from 'solito'
 import { I18nProvider } from '@lingui/react'
+import { useHydrateAtoms } from 'jotai/utils'
+
 import { useLinguiInit } from 'translations/utils'
 
 if (process.env.NODE_ENV === 'production') {
@@ -17,6 +19,8 @@ if (process.env.NODE_ENV === 'production') {
 
 function MyApp({ Component, pageProps }: SolitoAppProps) {
   const initializedI18n = useLinguiInit((pageProps as any).i18n)
+  const { initialState } = pageProps as any
+  // useHydrateAtoms(initialState ? [[postCache, initialState.prefetchedPostData]] : [])
   return (
     <>
       <Head>

@@ -13,6 +13,8 @@ import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import React, { useEffect, useState } from 'react'
 import { useLink } from 'solito/link'
 import { Trans } from '@lingui/macro'
+import { mermberAtom } from '@my/store'
+import { useAtom } from 'jotai'
 
 // import { GreeterClient } from '@my/proto'
 // import { HelloRequest, HelloReply } from '@my/proto'
@@ -27,6 +29,8 @@ export function HomeScreen() {
   })
 
   const [hello, setHello] = useState<any>()
+
+  const [member, setMember] = useAtom(mermberAtom);
 
   useEffect(() => {
     // const client = new GreeterClient('http://192.168.230.17:5000')
@@ -59,7 +63,12 @@ export function HomeScreen() {
         <Paragraph ta="center">
           <Trans>中文測試</Trans>
         </Paragraph>
-        <Paragraph ta="center"><Trans>helloa</Trans>: {hello}</Paragraph>
+        <Paragraph ta="center">
+          <Trans>helloa</Trans>: {hello}
+        </Paragraph>
+        <Paragraph ta="center">
+          <Trans>Member Name</Trans>: {member?.name}
+        </Paragraph>
         <Separator />
         <Paragraph ta="center">
           Made by{' '}

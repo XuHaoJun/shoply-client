@@ -2,7 +2,7 @@
 const { withTamagui } = require('@tamagui/next-plugin')
 const { join } = require('path')
 const million = require('million/compiler')
-const linguiConfig = require("./lingui.config")
+const linguiConfig = require('./lingui.config')
 
 const boolVals = {
   true: true,
@@ -74,7 +74,11 @@ module.exports = function () {
     ],
     experimental: {
       scrollRestoration: true,
-      swcPlugins: [['@lingui/swc-plugin', {}]],
+      swcPlugins: [
+        ['@lingui/swc-plugin', {}],
+        ['@swc-jotai/react-refresh', {}],
+        ['@swc-jotai/debug-label', {}],
+      ],
     },
     i18n: {
       locales: linguiConfig.locales,
