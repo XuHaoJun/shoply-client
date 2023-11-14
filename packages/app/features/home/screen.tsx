@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Anchor,
   Button,
@@ -11,7 +13,7 @@ import {
 } from '@my/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import React, { useEffect, useState } from 'react'
-import { useLink } from 'solito/link'
+import { useLink } from 'solito/navigation'
 import { Trans } from '@lingui/macro'
 import { mermberAtom } from '@my/store'
 import { useAtom } from 'jotai'
@@ -30,7 +32,7 @@ export function HomeScreen() {
 
   const [hello, setHello] = useState<any>()
 
-  const [member, setMember] = useAtom(mermberAtom);
+  const [member, setMember] = useAtom(mermberAtom)
 
   useEffect(() => {
     // const client = new GreeterClient('http://192.168.230.17:5000')

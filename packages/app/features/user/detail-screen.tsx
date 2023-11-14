@@ -1,16 +1,15 @@
+'use client'
+
 import { Button, Paragraph, YStack } from '@my/ui'
 import { ChevronLeft } from '@tamagui/lucide-icons'
 import React from 'react'
-import { createParam } from 'solito'
-import { useLink } from 'solito/link'
+import { useLink, useParams } from 'solito/navigation'
 import { MyCarousel } from '../home/MyCarousel'
-// import { MyCarousel2 } from '../home/MyCarousel2'
-import { Platform } from 'react-native'
 
-const { useParam } = createParam<{ id: string }>()
+type Params = { id: string }
 
 export function UserDetailScreen() {
-  const [id] = useParam('id')
+  const { id } = useParams<Params>()
   const link = useLink({
     href: '/',
   })
@@ -22,7 +21,6 @@ export function UserDetailScreen() {
         Go Home
       </Button>
       <MyCarousel />
-      {/* {Platform.OS === 'web' ? <MyCarousel /> : <MyCarousel2 />} */}
     </YStack>
   )
 }

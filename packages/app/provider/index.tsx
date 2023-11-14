@@ -1,3 +1,5 @@
+'use client'
+
 import { CustomToast, TamaguiProvider, TamaguiProviderProps, ToastProvider } from '@my/ui'
 import { useColorScheme } from 'react-native'
 
@@ -23,8 +25,6 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
           ]
         }
       >
-        {children}
-
         <CustomToast />
         <ToastViewport />
       </ToastProvider>

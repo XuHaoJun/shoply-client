@@ -35,6 +35,7 @@ Remove this log in next.config.js.
 
 const plugins = [
   withTamagui({
+    appDir: true,
     config: './tamagui.config.ts',
     components: ['tamagui', '@my/ui'],
     importsWhitelist: ['constants.js', 'colors.js'],
@@ -79,10 +80,6 @@ module.exports = function () {
         ['@swc-jotai/react-refresh', {}],
         ['@swc-jotai/debug-label', {}],
       ],
-    },
-    i18n: {
-      locales: linguiConfig.locales,
-      defaultLocale: linguiConfig.sourceLocale,
     },
   }
 
