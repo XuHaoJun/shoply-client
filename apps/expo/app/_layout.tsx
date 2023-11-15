@@ -18,10 +18,6 @@ export default function HomeLayout() {
   })
   const scheme = useColorScheme()
 
-  if (!loaded) {
-    return null
-  }
-
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -34,6 +30,10 @@ export default function HomeLayout() {
         },
       })
   )
+
+  if (!loaded) {
+    return null
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
