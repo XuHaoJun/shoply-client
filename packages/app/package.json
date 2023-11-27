@@ -7,6 +7,8 @@
     "*.css"
   ],
   "dependencies": {
+    "@my/api": "0.0.1",
+    "@my/api-types": "0.0.1",
     "@my/proto": "0.0.1",
     "@my/ui": "0.0.1",
     "@tamagui/animations-react-native": "^1.79.1",
