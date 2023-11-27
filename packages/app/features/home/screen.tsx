@@ -29,6 +29,20 @@ export function HomeScreen() {
       isNestedNavigator: false,
     },
   })
+  const registerLinkProps = useLink({
+    href: '/register',
+    experimental: {
+      nativeBehavior: 'stack-replace',
+      isNestedNavigator: false,
+    },
+  })
+  const loginLinkProps = useLink({
+    href: '/login',
+    experimental: {
+      nativeBehavior: 'stack-replace',
+      isNestedNavigator: false,
+    },
+  })
 
   const [hello, setHello] = useState<any>()
 
@@ -90,6 +104,8 @@ export function HomeScreen() {
       </YStack>
       <XStack>
         <Button {...linkProps}>Link to user abc</Button>
+        <Button {...loginLinkProps}>登入</Button>
+        <Button {...registerLinkProps}>註冊</Button>
       </XStack>
       <SheetDemo />
     </YStack>
