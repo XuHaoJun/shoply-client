@@ -4,6 +4,6 @@
   "private": true,
   "main": "index.ts",
   "dependencies": {
-    "alova": "^2.14.0"
+    "axios": "^1.6.2"
   }
 }

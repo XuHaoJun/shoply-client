@@ -7,7 +7,7 @@ import React, { useMemo, useState } from 'react'
 import { useLink } from 'solito/navigation'
 import isEmail from 'validator/lib/isEmail'
 import isMobilePhone from 'validator/lib/isMobilePhone'
-import { alovaInstance } from '@my/api'
+import { axiosInstance } from '@my/api'
 
 function validateEmailOrPhone(emailOrPhone: string) {
   return isEmail(emailOrPhone) || isMobilePhone(emailOrPhone, 'zh-TW')
@@ -90,7 +90,7 @@ export function RegisterScreen() {
                   <Input size="$4" placeholder="驗證碼" value={otp} onChangeText={setOtp} />
                   <Button
                     onPress={() => {
-                      alovaInstance.Post('/member/send-otp', { emailOrPhone, otpType }).send()
+                      axiosInstance.post('/member/send-otp', { emailOrPhone, otpType })
                     }}
                   >
                     重新發送
@@ -104,7 +104,7 @@ export function RegisterScreen() {
                 <Button
                   onPress={() => {
                     setStep(1)
-                    alovaInstance.Post('/member/send-otp', { emailOrPhone, otpType }).send()
+                    axiosInstance.post('/member/send-otp', { emailOrPhone, otpType })
                   }}
                   disabled={!emailOrPhone || (Boolean(emailOrPhone) && Boolean(emailOrPhoneError))}
                 >
@@ -114,10 +114,11 @@ export function RegisterScreen() {
               {step === 1 && (
                 <Button
                   onPress={async () => {
-                    const isVerified = await alovaInstance
-                      .Post('/member/verify-otp', { emailOrPhone, otpType, otp })
-                      .send()
-                    console.log('result', isVerified)
+                    const { data: isVerified } = await axiosInstance.post('/member/verify-otp', {
+                      emailOrPhone,
+                      otpType,
+                      otp,
+                    })
                     if (isVerified) {
                       setStep(2)
                     }
