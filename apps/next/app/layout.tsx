@@ -12,10 +12,13 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const initializedI18n = await getLinguiInit2()
+  const axiosConfig = {
+    baseURL: process.env.BACKEND_API_URL,
+  }
   return (
     <html>
       <body>
-        <TamaguiProvider i18nProps={initializedI18n}>{children}</TamaguiProvider>
+        <TamaguiProvider i18nProps={initializedI18n} axiosConfig={axiosConfig}>{children}</TamaguiProvider>
       </body>
     </html>
   )
