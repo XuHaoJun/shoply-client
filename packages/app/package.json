@@ -21,9 +21,5 @@
     "expo-constants": "~14.4.2",
     "expo-linking": "~5.0.2",
     "solito": "^4.1.3"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.38",
-    "@types/react-native": "^0.72.7"
   }
 }

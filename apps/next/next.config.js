@@ -55,6 +55,7 @@ module.exports = function () {
   /** @type {import('next').NextConfig} */
   let config = {
     reactStrictMode: false,
+    output: 'standalone',
     typescript: {
       ignoreBuildErrors: true,
     },
@@ -70,6 +71,7 @@ module.exports = function () {
       'expo-linking',
       'expo-constants',
       'expo-modules-core',
+      'expo-linear-gradient',
       'react-native-reanimated',
       'react-native-gesture-handler',
       'react-native-swiper-flatlist',
