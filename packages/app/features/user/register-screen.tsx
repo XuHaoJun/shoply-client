@@ -52,9 +52,9 @@ export function RegisterScreen() {
   }
 
   return (
-    <YStack>
-      <XStack flex={1} jc="center">
-        <XStack height={84} maxWidth={1180} flex={1} ai="center">
+    <YStack flex={1}>
+      <XStack flex={1} jc="center" maxHeight={84}>
+        <XStack maxWidth={1180} flex={1} ai="center">
           <Text fontSize={33} height={42} color="#ee4d2d" marginRight="$5">
             🛒蝦粒購物
           </Text>
@@ -63,6 +63,7 @@ export function RegisterScreen() {
           <Text fontSize="$3">需要幫助?</Text>
         </XStack>
       </XStack>
+
       <XStack flex={1} jc="center" height={600} backgroundColor="#ee4d2d">
         <YStack flex={1} jc="center" maxWidth={1180}>
           <XStack jc="flex-end">
