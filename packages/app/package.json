@@ -11,15 +11,15 @@
     "@my/api-types": "0.0.1",
     "@my/proto": "0.0.1",
     "@my/ui": "0.0.1",
-    "@tamagui/animations-react-native": "^1.79.9",
-    "@tamagui/colors": "^1.79.9",
-    "@tamagui/font-inter": "^1.79.9",
-    "@tamagui/lucide-icons": "^1.79.9",
-    "@tamagui/shorthands": "^1.79.9",
-    "@tamagui/themes": "^1.79.9",
-    "@tamagui/use-window-dimensions": "^1.79.9",
+    "@tamagui/animations-react-native": "^1.79.19",
+    "@tamagui/colors": "^1.79.19",
+    "@tamagui/font-inter": "^1.79.19",
+    "@tamagui/lucide-icons": "^1.79.19",
+    "@tamagui/shorthands": "^1.79.19",
+    "@tamagui/themes": "^1.79.19",
+    "@tamagui/use-window-dimensions": "^1.79.19",
     "expo-constants": "~14.4.2",
     "expo-linking": "~5.0.2",
-    "solito": "^4.1.3"
+    "solito": "^4.2.0"
   }
 }

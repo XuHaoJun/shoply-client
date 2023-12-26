@@ -12,8 +12,8 @@
   "dependencies": {
     "@lingui/loader": "^4.6.0",
     "@lingui/swc-plugin": "^4.0.4",
-    "@tamagui/config": "^1.79.9",
-    "@tamagui/next-theme": "^1.79.9",
+    "@tamagui/config": "^1.79.19",
+    "@tamagui/next-theme": "^1.79.19",
     "accept-language": "^3.0.18",
     "app": "0.0.0",
     "million": "^2.6.4",
@@ -30,8 +30,8 @@
     "@lingui/cli": "^4.6.0",
     "@swc-jotai/debug-label": "^0.1.0",
     "@swc-jotai/react-refresh": "^0.1.0",
-    "@tamagui/next-plugin": "^1.79.9",
-    "@types/node": "^20.10.4",
+    "@tamagui/next-plugin": "^1.79.19",
+    "@types/node": "^20.10.5",
     "eslint-config-next": "^13.5.6"
   }
 }
