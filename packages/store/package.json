@@ -5,8 +5,8 @@
   "main": "index.ts",
   "dependencies": {
     "immer": "^10.0.3",
-    "jotai": "^2.6.0",
-    "jotai-immer": "^0.2.0",
+    "jotai": "^2.6.1",
+    "jotai-immer": "^0.3.0",
     "jotai-scope": "^0.4.1"
   }
 }
